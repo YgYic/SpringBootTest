@@ -1,0 +1,4 @@
+my:
+   servers:
+       - test.bar.com
+       - test11.bar.com
