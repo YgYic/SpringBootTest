@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.core.env.Environment;
@@ -25,6 +27,8 @@ import com.example.yaml.YamlConfig;
 @Controller
 public class Example {
 
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	private Environment env;
 
@@ -42,7 +46,7 @@ public class Example {
 	 */
 	@RequestMapping("/demo")
 	public String demo(Map<String, Object> map) {
-
+		logger.info("12121212");
 		if (StringUtils.isEmpty(args)) {
 			System.err.println("empty");
 		}
